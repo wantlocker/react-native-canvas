@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no' name='viewport'>
+    <style>
+      @font-face {
+        font-family: 'TWK Everett Regular';
+        src: local('TWK Everett Regular'),
+          url('file:///android_asset/fonts/TWK Everett Regular.otf')
+            format('opentype');
+      }
+      @font-face {
+        font-family: 'TWK Everett Bold';
+        src: local('TWK Everett Bold'),
+          url('file:///android_asset/fonts/TWK Everett Bold.otf')
+            format('opentype');
+      }
+      html {
+        -ms-content-zooming: none;
+        -ms-touch-action: pan-x pan-y;
+      }
+      body {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      * {
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p style="font-family: 'TWK Everett Regular', Arial, serif"></p>
+    <p style="font-family: 'TWK Everett Bold', Arial, serif"></p>
+    <script src="fontfaceobserver.standalone.js"></script>
+    <script src='../node_modules/ctx-polyfill/ctx-polyfill.js' type='text/javascript'></script>
+    <script src="./autoscale-canvas.js"></script>
+    <script src="./webview.js"></script>
+  </body>
+</html>
