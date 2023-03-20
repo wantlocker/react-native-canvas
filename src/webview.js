@@ -33,6 +33,8 @@ const flattenObject = object => {
 class AutoScaledCanvas {
   constructor(element) {
     this.element = element;
+    this.FontFace = window.FontFace;
+    this.fontFaceSet = document.fonts;
   }
 
   toDataURL(...args) {
@@ -67,6 +69,25 @@ class AutoScaledCanvas {
     this.savedHeight = value;
     this.autoScale();
     return value;
+  }
+
+  initFonts(fonts = []) {
+    return Promise
+      .all(fonts.map(font => this.addFont(font)));
+  }
+
+  addFont(name) {
+    return new Promise(resolve => {
+      const font = new FontFaceObserver(name);
+
+      font.load().then(function () {
+        console.log("Font loaded log")
+        resolve("Font loaded")
+      }).catch((e) => {
+        console.log("Font not loaded log")
+        resolve("Font not loaded")
+      });
+    });
   }
 }
 
