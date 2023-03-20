@@ -4,13 +4,13 @@ export default `<html><head>
       @font-face {
         font-family: 'TWK Everett Regular';
         src: local('TWK Everett Regular'),
-          url('file:///android_asset/fonts/TWK Everett Regular.otf')
+          url('TWK Everett Regular.otf')
             format('opentype');
       }
       @font-face {
         font-family: 'TWK Everett Bold';
         src: local('TWK Everett Bold'),
-          url('file:///android_asset/fonts/TWK Everett Bold.otf')
+          url('TWK Everett Bold.otf')
             format('opentype');
       }
       html {
